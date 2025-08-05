@@ -1,0 +1,12 @@
+.profile {
+  width: 50%;
+  height: 550px;
+  border: 1px solid #91c8e4d2;
+  background-color: #91c8e4d2;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: rgba(255, 255, 255, 0.818);
+  margin-left: 25%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

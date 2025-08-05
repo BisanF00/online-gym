@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+footer {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, #E63946, #000); 
+  color: white; 
+  bottom: 0; 
+  left: 0;
+  position: fixed;
+  font-size: 18px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/layoutBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top, #E63946, #000);
+  color: white;
+  margin-bottom: 30px;
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.appName {
+  margin-left: 40px;
+}
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+}

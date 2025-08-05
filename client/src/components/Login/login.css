@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+.loginForm {
+  background-color: #E63946;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 315px;
+  height: 400px;
+  margin: 50px auto;
+  color: white;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.formUp {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid white;
+  border-radius: 8px;
+  padding-bottom: 15px;
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.formdown {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  color: white;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+  color: white;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+  border: 2px solid #F1FAEE;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: #000;
+}
+
+p {
+  color: #7a000a;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.loginBtn {
+  width: 50%;
+  padding: 10px;
+  background-color: #000;
+  color: #F1FAEE;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.loginBtn:hover {
+  background-color: #F1FAEE;
+  color: #000;
+}
+
+.signUp {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+.signUp:hover {
+  color: #F1FAEE;
+}
+
+.loginPage {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/gymBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}

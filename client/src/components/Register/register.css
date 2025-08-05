@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+.SignForm {
+  background-color: #E63946;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 315px;
+  height: 680px;
+  margin: 50px auto;
+  color: white;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.formUp {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid white;
+  border-radius: 8px;
+  padding-bottom: 15px;
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: -10px;
+}
+
+.formdown {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 16px;
+  color: white;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  text-align: left;
+  color: white;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+  border: 2px solid #F1FAEE;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #000;
+}
+
+select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  border: 2px solid #F1FAEE;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+}
+
+p {
+  color: #7a000a;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.loginBtn {
+  width: 50%;
+  padding: 10px;
+  background-color: #000;
+  color: #F1FAEE;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.loginBtn:hover {
+  background-color: #F1FAEE;
+  color: #000;
+}
