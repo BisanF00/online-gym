@@ -74,7 +74,6 @@ router.post("/login", async (req, res) => {
 });
 
 router.get("/profile", routeGuard, async (req, res) => {
-  console.log("User from token:", req.user);
   const { id } = req.user;
 
   try {
