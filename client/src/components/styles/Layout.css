@@ -28,6 +28,7 @@ footer {
 .header {
   display: flex;
   align-items: center;
+  min-height: 100px;
   background: linear-gradient(to top, #E63946, #000);
   color: white;
   margin-bottom: 30px;

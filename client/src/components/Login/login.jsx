@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
+import { FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -53,7 +55,7 @@ export default function Login() {
         alert(data.message || "Login failed. Please try again.");
         return;
       }
-      
+
       console.log(data);
       localStorage.setItem("token", token);
       alert("Login successful!");
@@ -69,31 +71,32 @@ export default function Login() {
     <div className="loginPage">
       <form className="loginForm">
         <h2 className="formUp">Coachly</h2>
-        <label htmlFor="email">Email :</label>
-        <br />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Enter your email"
-          required
-        />
-        <br />
-        {emailError && <p>{emailError}</p>}
-
-        <label htmlFor="password">Password :</label>
-        <br />
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Enter your password"
-          required
-        />
-        <br />
-        {passwordError && <p>{passwordError}</p>}
+        <div className="input-box">
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+          <MdEmail className="inputIcon"/>
+          <br />
+          {emailError && <p>{emailError}</p>}
+        </div>
+        <div className="input-box">
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+            required
+          />
+          <FaLock className="inputIcon" />
+          <br />
+          {passwordError && <p>{passwordError}</p>}
+        </div>
 
         <button type="submit" onClick={handleLogin} className="loginBtn">
           Login

@@ -1,0 +1,75 @@
+.sportCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 580px;
+  width: 480px;
+  border-radius: 16px;
+  padding: 20px 30px;
+  overflow: hidden;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+.sportImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white,
+}
+
+.sportName {
+  font-size: 45px;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px; 
+  width: 50%;
+  min-width: 300px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.sportDescription {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.sportCard p {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  direction: ltr;
+  margin-bottom: 15px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sportContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./register.css";
 import { Link, useNavigate } from "react-router-dom";
+import { BsPersonFill } from "react-icons/bs";
+import { FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -73,62 +76,67 @@ export default function Register() {
   };
 
   return (
-    <div className="loginPage">
+    <div className="registerPage">
       <form className="SignForm">
         <h2 className="formUp">Coachly</h2>
-        <label htmlFor="name">UserName :</label>
-        <br />
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Enter your username"
-          required
-        />
-        <br />
-        {userNameError && <p>{userNameError}</p>}
+        <div className="input-sign">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Username"
+            required
+          />
+          <BsPersonFill className="inputIcon" />
+          <br />
+          {userNameError && <p>{userNameError}</p>}
+        </div>
 
-        <label htmlFor="email">Email :</label>
-        <br />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Enter your email"
-          required
-        />
-        <br />
-        {emailError && <p>{emailError}</p>}
+        <div className="input-sign">
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            required
+          />
+          <br />
+          <MdEmail className="inputIcon"/>
+          {emailError && <p>{emailError}</p>}
+        </div>
 
-        <label htmlFor="password">Password :</label>
-        <br />
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="Enter your password"
-          required
-        />
-        <br />
-        {passwordError && <p>{passwordError}</p>}
+        <div className="input-sign">
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="Password"
+            required
+          />
+          <FaLock className="inputIcon" />
+          <br />
+          {passwordError && <p>{passwordError}</p>}
+        </div>
 
-        <label htmlFor="gender">Gender :</label>
-        <select name="gender" value={formData.gender} onChange={handleChange}>
-          <option value="">-- Select Gender --</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
+        <div className="input-sign">
+          <select name="gender" value={formData.gender} onChange={handleChange}>
+            <option value="">-- Select Gender --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
 
-        <label htmlFor="role">Role :</label>
-        <select name="role" value={formData.role} onChange={handleChange}>
-          <option value="">-- Select Role --</option>
-          <option value="user">User</option>
-          <option value="trainer">Trainer</option>
-          <option value="nutritionist">Nutritionist</option>
-        </select>
+        <div className="input-sign">
+          <select name="role" value={formData.role} onChange={handleChange}>
+            <option value="">-- Select Role --</option>
+            <option value="user">User</option>
+            <option value="trainer">Trainer</option>
+            <option value="nutritionist">Nutritionist</option>
+          </select>
+        </div>
 
         <button onClick={handleSignUp} className="loginBtn">
           Sign Up

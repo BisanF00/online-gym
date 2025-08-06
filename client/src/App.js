@@ -10,6 +10,8 @@ import Home from './components/Pages/home';
 import Layout from './components/Layout';
 import NotFound from './components/Pages/notFound';
 import Profile from './components/Profile/profile';
+import Sports from './components/Sports/sports';
+import Trainers from './components/Trainers/trainers';
 
 function App() {
   return (
@@ -20,8 +22,8 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route element={<Layout />}>
         <Route path="/home" element={<Home />}/>
-        <Route path="/sports" element={<Home />}/>
-        <Route path="/coaches" element={<Home />}/>
+        <Route path="/sports" element={<Sports />}/>
+        <Route path="/coaches" element={<Trainers />}/>
         <Route path="/sessions" element={<Home />}/>
         <Route path="/nutritionist" element={<Home />}/>
         <Route path="/about" element={<Home />}/>
