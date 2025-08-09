@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
 .trainerCard {
   display: flex;
   justify-content: center;
@@ -237,4 +239,35 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+}
+
+.subscribeBtn {
+  display: flex;
+  align-self: self-end;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  padding: 5px 5px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subscribeBtn:hover {
+  background: #333;
+  color: #fff;
+  transition: transform 0.2s;
+  transform: scale(1.1);
 }
