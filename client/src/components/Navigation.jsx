@@ -31,12 +31,12 @@ export default function Navigation() {
           Coaches
         </NavLink>
         <NavLink
-          to="/sessions"
+          to="/subscription"
           className={({ isActive }) =>
             isActive ? "active-link" : "inactive-link"
           }
         >
-          Sessions
+          Subscription
         </NavLink>
         <NavLink
           to="/nutritionist"

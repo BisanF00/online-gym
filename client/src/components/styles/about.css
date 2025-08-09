@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+.about-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 120%;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-section {
+  padding: 2rem 1rem;
+  text-align: left;
+  width: 80%;
+  display: flex;
+  justify-self: center;
+}
+
+.contact-section h2 {
+  font-size: 2.4rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  color: white;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.contact-list a {
+  color: #0166ae;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+  .about-section.reverse {
+    flex-direction: column;
+  }
+}

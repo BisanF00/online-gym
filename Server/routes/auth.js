@@ -78,7 +78,7 @@ router.get("/profile", routeGuard, async (req, res) => {
 
   try {
     const result = await pool.query(
-      "SELECT name, email , role , gender FROM users WHERE id = $1",
+      "SELECT name, email , role , gender, profile_image FROM users WHERE id = $1",
       [id]
     );
     res.json(result.rows[0]);
@@ -87,5 +87,29 @@ router.get("/profile", routeGuard, async (req, res) => {
     res.status(500).send("Error fetching");
   }
 });
+
+router.put("/profile/image", routeGuard, async (req, res) => {
+  const { id } = req.user;
+  const { image } = req.body; 
+
+  if (!image) {
+    return res.status(400).json({ message: "No image provided" });
+  }
+
+  console.log("Updating image for user id:", id);
+  console.log("Image length:", image.length);
+
+  try {
+    await pool.query(
+      "UPDATE users SET profile_image = $1 WHERE id = $2",
+      [image, id]
+    );
+    res.json({ message: "Profile image updated successfully" });
+  } catch (error) {
+    console.error("Error updating profile image:", error);
+    res.status(500).json({ message: "Error updating profile image" });
+  }
+});
+
 
 module.exports = router;

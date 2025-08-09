@@ -17,9 +17,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const auth = require ("./routes/auth");
 const sports = require ("./routes/sports");
 const trainers = require ("./routes/trainers");
+const sport_trainer = require ("./routes/sports-trainers");
+const follow_like_comment = require ("./routes/follow-like-comments");
 
 app.use ("/user", auth)
-app.use ("/api", sports, trainers)
+app.use ("/api", sports, trainers, sport_trainer, follow_like_comment)
 
 app.use ((req , res) => {
   res.status (404).send("Page not found <a href='/'>Get back home</a>");

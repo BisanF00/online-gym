@@ -12,6 +12,8 @@ import NotFound from './components/Pages/notFound';
 import Profile from './components/Profile/profile';
 import Sports from './components/Sports/sports';
 import Trainers from './components/Trainers/trainers';
+import SportsAndTrainers from './components/Trainers/trainers-sports';
+import About from './components/Pages/about';
 
 function App() {
   return (
@@ -24,9 +26,10 @@ function App() {
         <Route path="/home" element={<Home />}/>
         <Route path="/sports" element={<Sports />}/>
         <Route path="/coaches" element={<Trainers />}/>
-        <Route path="/sessions" element={<Home />}/>
+        <Route path="/sports/coaches" element={<SportsAndTrainers />}/>
+        <Route path="/subscription" element={<Home />}/>
         <Route path="/nutritionist" element={<Home />}/>
-        <Route path="/about" element={<Home />}/>
+        <Route path="/about" element={<About />}/>
         <Route path="/profile" element={<Profile />}/>
         </Route>
         <Route path="*" element={<NotFound />} />

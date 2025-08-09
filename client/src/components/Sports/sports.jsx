@@ -32,6 +32,7 @@ export default function Sports() {
           {sportData.map((sport) => (
             <SportsCard
               key={sport.id}
+              sportId={sport.id}
               picture={sport.image}
               name={sport.name}
               description={sport.description}

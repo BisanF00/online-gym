@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 580px;
+  height: 650px;
   width: 480px;
   border-radius: 16px;
   padding: 20px 30px;
@@ -21,25 +21,31 @@
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid white,
+  border: 2px solid white;
 }
 
 .trainerName {
   font-size: 45px;
   border-bottom: 3px solid white;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
   width: 50%;
   min-width: 300px;
   text-align: center;
   margin-top: 15px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .trainersInfo {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
   margin-top: 20px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .trainersInfo p {
@@ -57,9 +63,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: -10px;
-  font-family: "Libertinus Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .trainerContainer {
@@ -92,10 +95,146 @@
 
 #specialty {
   width: 40%;
-  border: 1px solid #ccc;
+  background: rgba(255, 249, 249, 0.762);
+  border: 2px solid rgba(255, 249, 249, 0.762);
   border-radius: 5px;
   padding: 5px;
   font-family: "Libertinus Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.backBtn {
+  width: 100px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.backBtn:hover {
+  background: #333;
+  color: #fff;
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.btn {
+  margin: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-active {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-active:hover {
+  background-color: #0056b3;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: default;
+}
+
+.rating-star {
+  user-select: none;
+  margin-right: 2px;
+  margin-left: 5px;
+}
+
+.rating-star.filled {
+  color: #ffcc00;
+}
+
+.comment-toggle-btn {
+  flex-shrink: 0;
+}
+
+.comments-drawer {
+  position: fixed;
+  top: 40%;
+  right: 5%;
+  width: 320px;
+  height: 350px;
+  background: #a0a0a0;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1000;
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+  color: #f0eeee;
+}
+
+.comments-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 12px;
+  padding-right: 8px;
+}
+
+.comment-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.comment-input-area {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
 }

@@ -60,6 +60,7 @@ export default function Trainers() {
                 name={trainer.name}
                 specialty={trainer.specialty}
                 description={trainer.description}
+                trainer={trainer}
               />
             )
           )}
