@@ -14,4 +14,5 @@
 
 #### * A responsive frontend built with React.
 
-### Coachly aims to provide tailored fitness and nutrition support to users from the comfort of their own homes
+
+### Coachly aims to provide tailored fitness and nutrition support to users from the comfort of their own homes .

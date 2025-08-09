@@ -19,6 +19,7 @@
 
 .active-link {
   color: #000;
+  text-decoration: none;
 }
 
 .inactive-link {

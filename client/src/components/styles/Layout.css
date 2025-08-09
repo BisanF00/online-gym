@@ -4,7 +4,7 @@
 footer {
   width: 100%;
   text-align: center;
-  background: linear-gradient(to bottom, #E63946, #000); 
+  background: linear-gradient(to bottom, #c81322, #1d1c1c); 
   color: white; 
   bottom: 0; 
   left: 0;
@@ -16,19 +16,16 @@ footer {
 }
 
 .layout {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(../images/layoutBackground.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .header {
   display: flex;
   align-items: center;
-  background: linear-gradient(to top, #E63946, #000);
+  min-height: 100px;
+  background: linear-gradient(to top, #c81322, #1d1c1c);
   color: white;
   margin-bottom: 30px;
   font-family: "Playwrite AU QLD", cursive;

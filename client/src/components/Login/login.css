@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
 
 .loginForm {
-  background-color: #E63946;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 315px;
-  height: 400px;
-  margin: 50px auto;
-  color: white;
+  background-color: transparent;
+  padding: 20px 30px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin-top: 40px;
+  color: #fff;
   font-family: "Libertinus Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.formUp {
+.loginPage .formUp {
   text-align: center;
   font-size: 35px;
   margin-bottom: 30px;
@@ -28,73 +29,93 @@
   font-style: normal;
 }
 
-.formdown {
+.loginPage .formdown {
   text-align: center;
-  margin-top: 15px;
-  font-size: 16px;
-  color: white;
+  margin: 20px 0 15px;
+  font-size: 14px;
 }
 
-label {
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  text-align: left;
-  color: white;
+.loginPage .formdown p {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-input[type="email"],
-input[type="password"] {
+.loginPage .input-box {
   width: 100%;
-  padding: 8px 10px;
-  margin-bottom: 5px;
-  margin-top: -10px;
-  border: 2px solid #F1FAEE;
-  border-radius: 8px;
-  box-sizing: border-box;
-  display: block;
+  height: 50px;
+  position: relative;
+  margin: 40px 0;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box .inputIcon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.input-box:focus {
   outline: none;
   border-color: #000;
 }
 
-p {
-  color: #7a000a;
+.input-box p {
+  color: red;
   font-size: 15px;
-  margin-bottom: 10px;
-  margin-top: -10px;
+  margin-top: 5px;
   text-align: left;
+  margin-left: 5px;
 }
 
-.loginBtn {
+.loginPage .loginBtn {
   width: 50%;
-  padding: 10px;
-  background-color: #000;
-  color: #F1FAEE;
+  height: 45px;
+  background: #fff;
+  color: #333;
   border: none;
-  border-radius: 10px;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
-.loginBtn:hover {
-  background-color: #F1FAEE;
-  color: #000;
+.loginPage .loginBtn:hover {
+  background: #333;
+  color: #fff;
 }
 
-.signUp {
-  display: inline-block;
+.formdown .signUp {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  color: #000;
+  color: #fff;
+  margin-left: 5px;
 }
 
 .signUp:hover {
-  color: #F1FAEE;
+  color: #515050;
+  text-decoration: underline;
 }
 
 .loginPage {
@@ -106,6 +127,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }

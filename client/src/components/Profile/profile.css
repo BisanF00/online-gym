@@ -1,12 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 530px;
+  width: 420px;
+  border-radius: 16px;
+  padding: 20px 30px;
+  overflow: hidden;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+
+.image-upload {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white,
+}
+
+.imageIcon {
+  font-size: 200px;
+  color: rgba(255, 255, 255, 0.796);
+}
+
+.userName {
+  font-size: 45px;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px; 
   width: 50%;
-  height: 550px;
-  border: 1px solid #91c8e4d2;
-  background-color: #91c8e4d2;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-  color: rgba(255, 255, 255, 0.818);
-  margin-left: 25%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 300px;
+  text-align: center;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.userData {
+  color: white;
+  font-size: 18px;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+  direction: ltr;
+  margin-right: 40px;
+  margin-bottom: 15px;
+}
+
+.logoutBtn {
+  width: 35%;
+  height: 40px;
+  background: #fff;
+  color: #333;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.logoutBtn:hover {
+  background: #333;
+  color: #fff;
 }
