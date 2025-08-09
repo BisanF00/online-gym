@@ -14,6 +14,7 @@ import Sports from './components/Sports/sports';
 import Trainers from './components/Trainers/trainers';
 import SportsAndTrainers from './components/Trainers/trainers-sports';
 import About from './components/Pages/about';
+import Subscription from './components/Subscription/subscription';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         <Route path="/sports" element={<Sports />}/>
         <Route path="/coaches" element={<Trainers />}/>
         <Route path="/sports/coaches" element={<SportsAndTrainers />}/>
-        <Route path="/subscription" element={<Home />}/>
+        <Route path="/subscription" element={<Subscription />}/>
         <Route path="/nutritionist" element={<Home />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/profile" element={<Profile />}/>

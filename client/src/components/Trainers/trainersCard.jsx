@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./trainers.css";
 import { LiaWindowCloseSolid } from "react-icons/lia";
+import { FaCrown } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function TrainersCard({
   picture,
@@ -18,6 +20,8 @@ export default function TrainersCard({
   const [follow, setFollow] = useState(false);
   const [followerCount, setFollowerCount] = useState(0);
   const [showCommentsDrawer, setShowCommentsDrawer] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!trainer?.id) return;
@@ -83,7 +87,7 @@ export default function TrainersCard({
     setRating(star);
     await fetch(`http://localhost:1010/api/coaches/${trainer.id}/rate`, {
       method: "POST",
-      body: JSON.stringify({ score : star }),
+      body: JSON.stringify({ score: star }),
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -101,8 +105,8 @@ export default function TrainersCard({
 
     await fetch(`http://localhost:1010/api/coaches/${trainer.id}/comment`, {
       method: "POST",
-      body: JSON.stringify({ content : commentText }),
-      headers: { 
+      body: JSON.stringify({ content: commentText }),
+      headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -147,6 +151,9 @@ export default function TrainersCard({
   return (
     <>
       <div className="trainerCard">
+        <button className="subscribeBtn" onClick={() => navigate("/subscription")}>
+          <FaCrown /> Subscribe
+        </button>
         <img src={picture} alt={name} className="trainerImg"></img>
         <h3 className="trainerName">{name}</h3>
         <div className="trainersInfo">
@@ -177,7 +184,11 @@ export default function TrainersCard({
                 key={star}
                 onClick={() => handleRating(star)}
                 className={`rating-star ${rating >= star ? "filled" : ""}`}
-                style={{ cursor: "pointer", fontSize: "20px", color: rating >= star ? "#ffcc00" : "#ccc" }}
+                style={{
+                  cursor: "pointer",
+                  fontSize: "20px",
+                  color: rating >= star ? "#ffcc00" : "#ccc",
+                }}
               >
                 ★
               </span>
@@ -188,45 +199,48 @@ export default function TrainersCard({
           </div>
 
           <button
-          className="btn btn-active comment-toggle-btn"
-          onClick={() => setShowCommentsDrawer(true)}
-        >
-          💬 Comments ({comments.length})
-        </button>
-      </div>
-
-      {showCommentsDrawer && (
-        <div className="comments-drawer">
-          <div className="drawer-header">
-            <h3>Comments</h3>
-            <button className="close-btn" onClick={() => setShowCommentsDrawer(false)}>
-              <LiaWindowCloseSolid />
-            </button>
-          </div>
-
-          <div className="comments-list">
-            {comments.length === 0 && <p>No comments yet.</p>}
-            {comments.map((c, index) => (
-              <p key={index} className="comment-item">
-                <b>{c.name}</b>: {c.content}
-              </p>
-            ))}
-          </div>
-
-          <div className="comment-input-area">
-            <input
-              type="text"
-              className="comment-input"
-              value={commentText}
-              onChange={(e) => setCommentText(e.target.value)}
-              placeholder="Add a comment..."
-            />
-            <button className="btn btn-active" onClick={handleComment}>
-              Submit
-            </button>
-          </div>
+            className="btn btn-active comment-toggle-btn"
+            onClick={() => setShowCommentsDrawer(true)}
+          >
+            💬 Comments ({comments.length})
+          </button>
         </div>
-      )}
+
+        {showCommentsDrawer && (
+          <div className="comments-drawer">
+            <div className="drawer-header">
+              <h3>Comments</h3>
+              <button
+                className="close-btn"
+                onClick={() => setShowCommentsDrawer(false)}
+              >
+                <LiaWindowCloseSolid />
+              </button>
+            </div>
+
+            <div className="comments-list">
+              {comments.length === 0 && <p>No comments yet.</p>}
+              {comments.map((c, index) => (
+                <p key={index} className="comment-item">
+                  <b>{c.name}</b>: {c.content}
+                </p>
+              ))}
+            </div>
+
+            <div className="comment-input-area">
+              <input
+                type="text"
+                className="comment-input"
+                value={commentText}
+                onChange={(e) => setCommentText(e.target.value)}
+                placeholder="Add a comment..."
+              />
+              <button className="btn btn-active" onClick={handleComment}>
+                Submit
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

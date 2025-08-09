@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&family=Playwrite+AU+QLD:wght@100..400&family=Playwrite+HU:wght@100..400&family=Playwrite+PL:wght@100..400&display=swap');
+
+.subscriptionContainer {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subscriptionContainer h1 {
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.subscriptionInformation {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.subscriptionInformation:hover {
+  cursor: pointer;
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.selectedContainer {
+  max-width: 600px;
+  height: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.selectedInformation {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.backToPlan {
+  margin-top: 40px;
+  width: 120px;
+  height: 50px;
+  padding: 10px 0;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Libertinus Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.backToPlan:hover {
+  background: #333;
+  color: #fff;
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
