@@ -42,3 +42,12 @@ main {
   flex-grow: 1;
   padding: 2rem;
 }
+
+@media (max-width: 600px) {
+  .header {
+    font-size: 2rem;
+  }
+  main {
+    font-size: 1rem;
+  }
+}
