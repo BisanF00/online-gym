@@ -2,6 +2,8 @@ import "../styles/about.css";
 import fitnessCoaching from "../images/Fitness-coaching.jpg";
 import nutritionAdvice from "../images/Nutrition-advice.png";
 import coachlyTeam from "../images/Coachly-team.jpg";
+import { IoLogoGithub } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function About() {
   return (
@@ -63,6 +65,10 @@ export default function About() {
             </li>
             <li>Address: 123 Fitness St., Amman City, Jordan</li>
           </ul>
+          <div className="contactIcon">
+            <a href="https://github.com/BisanF00"><IoLogoGithub /></a>
+            <a href="https://www.linkedin.com/in/bisanfararjeh/"><FaLinkedin /></a>
+          </div>
         </div>
       </section>
     </div>
