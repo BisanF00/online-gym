@@ -15,6 +15,7 @@ import Trainers from './components/Trainers/trainers';
 import SportsAndTrainers from './components/Trainers/trainers-sports';
 import About from './components/Pages/about';
 import Subscription from './components/Subscription/subscription';
+import Nutritionist from './components/Nutritionist/nutritionist';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         <Route path="/coaches" element={<Trainers />}/>
         <Route path="/sports/coaches" element={<SportsAndTrainers />}/>
         <Route path="/subscription" element={<Subscription />}/>
-        <Route path="/nutritionist" element={<Home />}/>
+        <Route path="/nutritionist" element={<Nutritionist />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/profile" element={<Profile />}/>
         </Route>
